@@ -21,7 +21,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	if(!strcmp(cmdtext, "/selveh", true, 20))
 	{
 	    ResetSelectionModel(playerid);
-     	for(new i = 411; i < 500; i++)
+     	    for(new i = 411; i < 500; i++)
 	    {
 	        AddSelectionModel(playerid, i, "Pilih Mobilnya, Gratis Kok");
 	    }
@@ -30,10 +30,17 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	if(!strcmp(cmdtext, "/selskin", true, 20))
 	{
 	    ResetSelectionModel(playerid);
-     	for(new i = 1; i < 70; i++)
+     	    for(new i = 1; i < 70; i++)
 	    {
 	        AddSelectionModel(playerid, i, "Pilih Skinnya, Gratis kok");
 	    }
+	    ShowSelection(playerid, SELECTION_SKIN, "Select Skin", "Pilih", "Batal");
+	}
+        if(!strcmp(cmdtext, "/skin", true, 20))
+	{
+	    ResetSelectionModel(playerid);
+     	    AddSelectionModel(playerid, 2, "Skin orang kaya");
+            AddSelectionModel(playerid, 230, "Skin orang miskin");
 	    ShowSelection(playerid, SELECTION_SKIN, "Select Skin", "Pilih", "Batal");
 	}
 }
