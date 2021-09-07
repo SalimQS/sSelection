@@ -7,3 +7,6 @@ ShowSelection(playerid, menuid, title[], button1[], button2[]);
 AddSelectionModel(playerid, model, info[]);
 ResetSelectionModel(playerid);
 DestroySelectionMenu(playerid);
+
+# Callback
+OnSelectionResponse(playerid, response, menuid, modelid) 
