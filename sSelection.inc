@@ -1,6 +1,6 @@
 /*
 	Credit:
-	• Salim
+	â€¢ Salim
 
 	see any problem/bug on this include? Contact my discord: Salim#5857
 	if u remove this u nerd.
@@ -311,12 +311,12 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	return CallLocalFunction("sS_OnPlayerClickPTextdraw", "ii", playerid, _:playertextid);
 }
 
-#if defined _ALS_OnPlayerClickTextDraw
-	#undef OnPlayerClickTextDraw
+#if defined _ALS_OnPlayerClickPlayerTextDraw
+	#undef OnPlayerClickPlayerTextDraw
 #else
-	#define _ALS_OnPlayerClickTextDraw
+	#define _ALS_OnPlayerClickPlayerTextDraw
 #endif
-#define OnPlayerClickTextDraw sS_OnPlayerClickPTextdraw
+#define OnPlayerClickPlayerTextDraw sS_OnPlayerClickPTextdraw
 
 forward sS_OnPlayerClickPTextdraw(playerid, PlayerText:playertextid);
 //---------------------------------------------------------
