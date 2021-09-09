@@ -311,10 +311,10 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	return CallLocalFunction("sS_OnPlayerClickPTextdraw", "ii", playerid, _:playertextid);
 }
 
-#if defined _ALS_OnPlayerClickPlayerTextDraw
-	#undef OnPlayerClickPlayerTextDraw
+#if defined _ALS_OnPlayerClickPTextDraw
+	#undef OnPlayerClickPTextDraw
 #else
-	#define _ALS_OnPlayerClickPlayerTextDraw
+	#define _ALS_OnPlayerClickPTextDraw
 #endif
 #define OnPlayerClickPlayerTextDraw sS_OnPlayerClickPTextdraw
 
