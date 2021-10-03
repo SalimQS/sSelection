@@ -3,13 +3,13 @@ Please dont remove the credit whatever reason is,
 if u find some bug or problem, pls report it to me
 
 # Function
-`ShowSelection(playerid, menuid, title[], button1[], button2[]);`
-`AddSelectionModel(playerid, model, info[]);`
-`ResetSelectionModel(playerid);`
-`DestroySelectionMenu(playerid);`
+```ShowSelection(playerid, menuid, title[], button1[], button2[]);
+AddSelectionModel(playerid, model, info[]);
+ResetSelectionModel(playerid);
+DestroySelectionMenu(playerid);```
 
 # Callback
-`OnSelectionResponse(playerid, response, menuid, modelid)`
+```OnSelectionResponse(playerid, response, menuid, modelid)```
 
 # Example
 ```//define the id for menu
@@ -29,7 +29,7 @@ public OnSelectionResponse(playerid, response, menuid, modelid)
     {
 	    if(response)//if player click the left button, response will return 1, and if player click the right button, response will return 0
 	    {
-	        //You script
+	        SetPlayerSkin(playerid, modelid);
 	    }
     }
     return 1;
