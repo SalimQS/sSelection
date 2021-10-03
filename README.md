@@ -6,10 +6,12 @@ if u find some bug or problem, pls report it to me
 ```ShowSelection(playerid, menuid, title[], button1[], button2[]);
 AddSelectionModel(playerid, model, info[]);
 ResetSelectionModel(playerid);
-DestroySelectionMenu(playerid);```
+DestroySelectionMenu(playerid);
+```
 
 # Callback
-```OnSelectionResponse(playerid, response, menuid, modelid)```
+```OnSelectionResponse(playerid, response, menuid, modelid)
+```
 
 # Example
 ```//define the id for menu
