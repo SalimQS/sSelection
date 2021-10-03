@@ -269,8 +269,6 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	    sS_PlayerSelectedModelID[playerid] = model;
 	    sS_PlayerSelectedModel[playerid] = i;
 
-	    PlayerTextDrawHide(playerid, sS_Textdraw[playerid][Model]);
-        PlayerTextDrawHide(playerid, sS_Textdraw[playerid][Info]);
 	    PlayerTextDrawSetPreviewModel(playerid,  sS_Textdraw[playerid][Model], model);
 	    PlayerTextDrawSetString(playerid, sS_Textdraw[playerid][Info], sS_Info[playerid][i]);
 	    PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Model]);
@@ -287,8 +285,6 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	    sS_PlayerSelectedModelID[playerid] = model;
 	    sS_PlayerSelectedModel[playerid] = i;
 
-        PlayerTextDrawHide(playerid, sS_Textdraw[playerid][Model]);
-        PlayerTextDrawHide(playerid, sS_Textdraw[playerid][Info]);
 	    PlayerTextDrawSetPreviewModel(playerid,  sS_Textdraw[playerid][Model], model);
 	    PlayerTextDrawSetString(playerid, sS_Textdraw[playerid][Info], sS_Info[playerid][i]);
 	    PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Model]);
