@@ -10,7 +10,8 @@ DestroySelectionMenu(playerid);
 ```
 
 # Callback
-```OnSelectionResponse(playerid, response, menuid, modelid)
+```
+OnSelectionResponse(playerid, response, menuid, modelid)
 ```
 
 # Example
