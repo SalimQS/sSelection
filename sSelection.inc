@@ -2,7 +2,7 @@
 	Credit:
 	• Salim
 
-	see any problem/bug on this include? Contact my discord: Salim#5857
+	see any problem/bug on this include? Report to me
 	if u remove this u nerd.
 */
 
