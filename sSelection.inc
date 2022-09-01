@@ -260,49 +260,49 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 {
 	if(playertextid == sS_Textdraw[playerid][RightButton])
 	{
-     	new i = sS_PlayerSelectedModel[playerid]+1;
-	    if(i == PlayerSelectionModelCount(playerid))
-	    {
-	        i = 0;
-	    }
-	    new model = sS_Model[playerid][i];
-	    sS_PlayerSelectedModelID[playerid] = model;
-	    sS_PlayerSelectedModel[playerid] = i;
+     		new i = sS_PlayerSelectedModel[playerid]+1;
+	    	if(i == PlayerSelectionModelCount(playerid))
+	    	{
+	        	i = 0;
+	    	}
+	    	new model = sS_Model[playerid][i];
+	    	sS_PlayerSelectedModelID[playerid] = model;
+	    	sS_PlayerSelectedModel[playerid] = i;
 
-	    PlayerTextDrawSetPreviewModel(playerid,  sS_Textdraw[playerid][Model], model);
-	    PlayerTextDrawSetString(playerid, sS_Textdraw[playerid][Info], sS_Info[playerid][i]);
-	    PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Model]);
-        PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Info]);
+	    	PlayerTextDrawHide(playerid, sS_Textdraw[playerid][Model]);
+	    	PlayerTextDrawSetPreviewModel(playerid,  sS_Textdraw[playerid][Model], model);
+	    	PlayerTextDrawSetString(playerid, sS_Textdraw[playerid][Info], sS_Info[playerid][i]);
+	    	PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Model]);
 	}
 	else if(playertextid == sS_Textdraw[playerid][LeftButton])
 	{
-     	new i = sS_PlayerSelectedModel[playerid]-1;
-	    if(i == -1)
-	    {
-	        i = PlayerSelectionModelCount(playerid)-1;
-	    }
-	    new model = sS_Model[playerid][i];
-	    sS_PlayerSelectedModelID[playerid] = model;
-	    sS_PlayerSelectedModel[playerid] = i;
+     		new i = sS_PlayerSelectedModel[playerid]-1;
+	    	if(i == -1)
+	    	{
+	        	i = PlayerSelectionModelCount(playerid)-1;
+	    	}
+	    	new model = sS_Model[playerid][i];
+	    	sS_PlayerSelectedModelID[playerid] = model;
+	    	sS_PlayerSelectedModel[playerid] = i;
 
-	    PlayerTextDrawSetPreviewModel(playerid,  sS_Textdraw[playerid][Model], model);
-	    PlayerTextDrawSetString(playerid, sS_Textdraw[playerid][Info], sS_Info[playerid][i]);
-	    PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Model]);
-        PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Info]);
+	    	PlayerTextDrawHide(playerid, sS_Textdraw[playerid][Model]);
+	    	PlayerTextDrawSetPreviewModel(playerid,  sS_Textdraw[playerid][Model], model);
+	    	PlayerTextDrawSetString(playerid, sS_Textdraw[playerid][Info], sS_Info[playerid][i]);
+	    	PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Model]);
 	}
 	else if(playertextid == sS_Textdraw[playerid][Button2])
 	{
-	    CancelSelectTextDraw(playerid);
-	    new response = 0;
-	    CallLocalFunction("OnSelectionResponse","iiii", playerid, response, sS_PlayerMenuId[playerid], sS_PlayerSelectedModelID[playerid]);
-        DestroySelectionMenu(playerid);
+	    	CancelSelectTextDraw(playerid);
+	    	new response = 0;
+	    	CallLocalFunction("OnSelectionResponse","iiii", playerid, response, sS_PlayerMenuId[playerid], sS_PlayerSelectedModelID[playerid]);
+        	DestroySelectionMenu(playerid);
 	}
 	else if(playertextid == sS_Textdraw[playerid][Button1])
 	{
-	    CancelSelectTextDraw(playerid);
-	    new response = 1;
-	    CallLocalFunction("OnSelectionResponse","iiii", playerid, response, sS_PlayerMenuId[playerid], sS_PlayerSelectedModelID[playerid]);
-        DestroySelectionMenu(playerid);
+	    	CancelSelectTextDraw(playerid);
+	    	new response = 1;
+	    	CallLocalFunction("OnSelectionResponse","iiii", playerid, response, sS_PlayerMenuId[playerid], sS_PlayerSelectedModelID[playerid]);
+        	DestroySelectionMenu(playerid);
 	}
 	return CallLocalFunction("sS_OnPlayerClickPTextdraw", "ii", playerid, _:playertextid);
 }
