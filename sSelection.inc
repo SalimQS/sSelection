@@ -119,7 +119,7 @@ stock DestroySelectionMenu(playerid)
 //---------------------------------------------------------
 stock ShowSelectionMenu(playerid)
 {
-    PlayerTextDrawShow(playerid, sS_Textdraw[playerid][BackgroundBlack]);
+    	PlayerTextDrawShow(playerid, sS_Textdraw[playerid][BackgroundBlack]);
 	PlayerTextDrawShow(playerid, sS_Textdraw[playerid][BackgroundWhite]);
 	PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Title]);
 	PlayerTextDrawShow(playerid, sS_Textdraw[playerid][Model]);
@@ -238,7 +238,7 @@ stock CreateSelectionMenu(playerid)
 	PlayerTextDrawSetPreviewRot(playerid,  sS_Textdraw[playerid][RightButton], -16.000000, 0.000000, -20.000000, 1.000000);
 	PlayerTextDrawSetSelectable(playerid, sS_Textdraw[playerid][RightButton], 1);
 
-	sS_Textdraw[playerid][LeftButton] = CreatePlayerTextDraw(playerid,128.000000, 190.000000, "id_beat:left");
+	sS_Textdraw[playerid][LeftButton] = CreatePlayerTextDraw(playerid,128.000000, 190.000000, "ld_beat:left");
 	PlayerTextDrawAlignment(playerid, sS_Textdraw[playerid][LeftButton], 2);
 	PlayerTextDrawBackgroundColor(playerid, sS_Textdraw[playerid][LeftButton], 255);
 	PlayerTextDrawFont(playerid, sS_Textdraw[playerid][LeftButton], 4);
