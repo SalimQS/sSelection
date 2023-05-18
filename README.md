@@ -1,6 +1,5 @@
 # Note
-Please dont remove the credit whatever reason is,
-if u find some bug or problem, pls report it to me
+sSelection? Salim  Selection
 
 # Function
 ```ShowSelection(playerid, menuid, title[], button1[], button2[]);
